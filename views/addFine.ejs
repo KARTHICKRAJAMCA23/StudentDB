@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Fine or Fee</title>
+</head>
+<body>
+  <h1>Add Fine or Fee</h1>
+  <form method="POST" action="/addFine">
+    <label>
+      Type:
+      <select name="type">
+        <option value="Fine">Fine</option>
+        <option value="Fee">Fee</option>
+      </select>
+    </label>
+    <br>
+    <label>
+      Amount:
+      <input type="number" name="amount" required>
+    </label>
+    <br>
+    <label>
+      Date:
+      <input type="date" name="date" required>
+    </label>
+    <br>
+     if (type === 'Fine') { %>
+      <label>
+        Student IDs (comma-separated):
+        <input type="text" name="studentIds" required>
+      </label>
+      <br>
+   } %>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

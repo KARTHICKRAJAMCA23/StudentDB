@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>View Reports</title>
+</head>
+<body>
+  <h1>View Reports</h1>
+  <h2>Students:</h2>
+  <ul>
+    <% students.forEach(student => { %>
+      <li>
+        <%= student.name %>
+        <% if (student.fines.length > 0) { %>
+          <ul>
+            <li>Fines:</li>
+            <% student.fines.forEach(fine => { %>
+              <li>Type: <%= fine.type %>, Amount: <%= fine.amount %>, Date: <%= fine.date %></li>
+            <% }) %>
+          </ul>
+        <% } %>
+        <% if (student.fees.length > 0) { %>
+          <ul>
+            <li>Fees:</li>
+            <% student.fees.forEach(fee => { %>
+              <li>Type: <%= fee.type %>, Amount: <%= fee.amount %>, Date: <%= fee.date %></li>
+            <% }) %>
+          </ul>
+        <% } %>
+      </li>
+    <% }) %>
+  </ul>
+  
+  <h2>Faculties:</h2>
+  <ul>
+    <% faculties.forEach(faculty => { %>
+      <li>
+        <%= faculty.name %>, <%= faculty.department %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

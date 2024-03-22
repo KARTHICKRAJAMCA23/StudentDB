@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+<div class="container" >
+  <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Fine page</h1>
+    <p class="secret-text">Add fine</p>
+
+    <form action="/submit" method="POST">
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="studentname"  placeholder="name" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="Regno"  placeholder="Register number" required>
+      </div>
+      <div class="form-group">
+        <label for="date">Date of payment</label>
+        <input type="date" class="form-control" name="date" required>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control text-center" name="email"  placeholder="email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control text-center" name="password"  placeholder="password" required>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="course"  placeholder="plese enter course" required>
+      </div>
+      <!-- <div class="form-group">
+        <input type="text" class="form-control text-center" name="finename"  placeholder="type of fine" required>
+      </div> -->
+      <!-- <div class="form-group">
+        <input type="number" class="form-control text-center" name="fineamount"  placeholder="add amount" required>
+      </div> -->
+      <div class="form-group">
+        <label for="password">amount</label>
+       
+<select  name="finename">
+<option value="Informal Dress code">Informal Dress code</option>
+<option value="Late Submission of Assignment">Late Submission of Assignment</option>
+<option value="Late comers">Late comers</option>
+</select>
+      </div>
+      <div class="form-group">
+        <label for="password">amount</label>
+       
+<select  name="fineamount">
+<option value=10>10</option>
+<option value=15>15</option>
+<option value=50>50</option>
+</select>
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+      <a class="btn btn-dark btn-lg" href="/" role="button">Logout</a>
+     
+    </form>
+
+
+  </div>
+</div>
+<%- include('partials/footer') %>

@@ -1,0 +1,32 @@
+<h1>Fines</h1>
+<% if (fines.length > 0) { %>
+  <table>
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Registration Number</th>
+        <th>Date</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Fine Name</th>
+        <th>Fine Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% fines.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(function(fine) { %>
+        <tr>
+          <td><%= fine.studentname %></td>
+          <td><%= fine.Regno %></td>
+          <td><%= fine.date %></td>
+          <td><%= fine.email %></td>
+          <td><%= fine.course %></td>
+          <td><%= fine.finename %></td>
+          <td><%= fine.fineamount %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+<% } else { %>
+  <p>No fines found.</p>
+<% } %>
+<a class="btn btn-light btn-lg" href="/" role="button">Got it </a>
